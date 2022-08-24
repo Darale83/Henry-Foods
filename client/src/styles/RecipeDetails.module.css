@@ -1,0 +1,86 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.box {
+
+
+  height: 100%;
+
+}
+
+.detailsWrapper {
+  background-image: url('../assets/DetailImage3.jpg');
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  background-size: cover;
+  background-attachment: fixed;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  /* padding: 100px 0; */
+}
+
+.detailsCard {
+  display: flex;
+  color: rgb(7, 7, 7);
+  flex-direction: column;
+  background-color: rgba(210, 215, 219, 0.589);
+  border-radius: 10px;
+  margin-left: 200px;
+  /* height: 100vh; */
+  width: 1200px
+}
+
+.detailsImage {
+  height: 250px;
+  border-radius: 10px;
+}
+
+.detailsInfo {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 20px 0 20px;
+}
+
+.type-icon-container {
+  display: flex;
+}
+
+.type-icon {
+  height: 70px;
+  width: 70px;
+}
+
+.detailsButton {
+  background-color: rgb(233, 199, 155);
+  /* background: rgb(174,224,238);
+  background: radial-gradient(circle, rgba(174,224,238,1) 0%, rgba(148,177,233,0.7539390756302521) 100%); */
+  height: 40px;
+  width: 80px;
+  outline: invert;
+  border-radius: 10px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+
+.detailsButton:hover {
+  transform: scale(1.2);
+}
+
+.detailsLoader {
+  background-image: url("../assets/DetailImage3.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+}

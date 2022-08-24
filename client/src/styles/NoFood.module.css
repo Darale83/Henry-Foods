@@ -1,0 +1,13 @@
+.noFoodContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noFoodImage {
+  background-color: rgba(247, 231, 207, 0.384);
+  border-radius: 20px;
+  height: 450px;
+  width: 400px;
+  margin-top: 70px;
+}

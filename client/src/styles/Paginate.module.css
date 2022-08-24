@@ -1,0 +1,60 @@
+.container {
+  
+  grid-column: 2;
+  
+}
+
+
+.pagination {
+  font-family: 'Lusitana', serif  ;
+  display: inline; 
+  margin: 5px 
+}
+
+.paginationBtn {
+  font-family: 'Lusitana', serif;
+  font-size: large;
+  display: inline-block;
+  align-items: center;
+  /* padding: 10px 20px; */
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  background: none;
+  background-color: #b1a38b70;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+}
+
+
+
+.paginationBtn:hover {
+  transform: scale(1.2);
+  color: bisque;
+  background-color: rgba(102, 67, 13, 0.938);
+}
+
+.ulPos {
+  display: contents;
+  list-style: none;
+}
+
+.active {
+  transform: scale(1.2);
+  font-family: 'Lusitana', serif;
+  font-size: large;
+  display: inline-block;
+  align-items: center;
+  /* padding: 10px 20px; */
+  border-radius: 5px;
+  height: 40px;
+  width: 40px;
+  background: none;
+  background-color: #b1a38b70;
+  cursor: pointer;
+	color: bisque;
+  background-color: rgba(102, 67, 13, 0.938);
+  
+}
+
+

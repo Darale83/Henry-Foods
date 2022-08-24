@@ -1,0 +1,6 @@
+.sidePanel {
+	background-image: url('../assets/SidePanelBackground.jpg');
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+}

@@ -1,0 +1,125 @@
+.formContainer {
+  background-image: url("../assets/createImg2.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding: 10px;
+  /* height: 100vh;
+  width: 100vw;   */
+}
+
+.nav {
+  grid-column: 1/4;
+	grid-row: 1;
+}
+
+
+.title {    
+  text-align: center;
+  margin-right: 38%;
+  background: none;
+  color:aliceblue;
+  margin-bottom: 50px;
+}
+
+.titleContainer {
+  margin-left: 90px;
+}
+
+.container {  
+  justify-content: flex-start;
+  max-width: 700px;
+  width: 100%;
+  background-color: rgba(95, 97, 99, 0.425);
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.container form .recipeDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .recipeDetails .inputBox {
+  margin: 20px 0 12px 0;
+  width: calc(100% / 2 - 20px);
+}
+
+.recipeDetails .inputBox .details {
+  display: block;
+  font-weight: 500;
+  color: aliceblue;
+  margin-bottom: 5px;
+}
+
+.recipeDetails .inputBox input {
+  height: 25px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.recipeDetails .inputBox input:focus {
+  border-color: #9b59b6;
+}
+
+.optionContainer {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  
+}
+
+.optionButton {
+  font-family: 'Gloria Hallelujah', cursive;
+
+  margin-right: 10px;
+  background: rgb(221, 136, 39);
+  border-radius: 5px;
+} 
+
+ 
+.createBtn {
+   box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ff9777 5%, #fb5725 100%);
+	background-color:#ff9e77;
+	border-radius:11px;
+	border:2px solid #ee7c4f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-family: 'Gloria Hallelujah', cursive;
+	font-size:16px;
+	font-weight:bold;
+	padding:8px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc7f52;
+  transition: all ease-in-out 0.4s;
+}
+
+.createBtn:hover {
+  transform: scale(1.2);
+	background:linear-gradient(to bottom, #963b06 5%, #a75e4c 100%);
+	background-color:#fb9e25;
+}
+
+.validationError {
+  color: red;
+  font-weight: bolder;
+}

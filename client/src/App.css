@@ -1,0 +1,49 @@
+/* ::-webkit-scrollbar {
+	display: none;
+} */
+
+.App {
+	/* background-image: url('./assets/HomeBackground2.jpg'); */
+	font-family: 'Work Sans', sans-serif;
+	text-align: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	/* background: linear-gradient(to bottom right, #0a4c66, #02101d); */
+	color: azure;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 7fr;
+}
+
+
+
+.nav {
+	grid-column: 1/4;
+	grid-row: 1;
+}
+
+.site {
+	grid-column: 2;
+	grid-row: 2;
+	justify-content: center;
+	align-content: center;
+	overflow: scroll;
+
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+
+

@@ -1,0 +1,26 @@
+.card {  font-family: 'Gloria Hallelujah', cursive;
+  color: #cac7ff;
+  background-color: #c6c7cab7;
+  justify-content: space-evenly;
+  width: 00px;
+  border-radius: 10px;
+  transition:  all ease-in-out 0.5s;
+}
+
+.card:hover{
+  transform: scale(1.2);
+  cursor: pointer
+}
+
+.name {
+  text-decoration: none;
+  color: black;
+  font-size: medium;
+}
+
+.image{
+  background-color: white;
+  width: 60%;
+  margin-left: 7px;
+  height: 150px;  
+}
