@@ -14,14 +14,23 @@ const getApiInfo = async () => {
       image: e.image,
       summary: e.summary.replace(/(<([^>]+)>)/gi, ""),
       healthScore: e.healthScore,
-      diets: e.diets,
-      dishTypes: e.dishTypes,
-      steps: e.analyzedInstructions[0]?.steps.map((e) => {
-        return e.step;
-      }),
+      // diets: e.diets,
+      dishTypes: e.dishTypes.join("").toString(),
+      steps: e.analyzedInstructions[0]?.steps
+        .map((e) => {
+          return e.step;
+        })
+        .join("")
+        .toString(),
     };
   });
-  return apiRecipes;
+  await Recipe.bulkCreate(apiRecipes);
+  //return apiRecipes;
+  //console.log(apiRecipes);
+};
+
+const apiToDb = async (info) => {
+  return await Recipe.bulkCreate(info);
 };
 
 const getDbInfo = async () => {
@@ -63,4 +72,6 @@ const createTypes = async () => {
 module.exports = {
   getAllRecipes,
   createTypes,
+  getApiInfo,
+  apiToDb,
 };

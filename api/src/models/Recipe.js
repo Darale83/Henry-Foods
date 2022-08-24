@@ -7,8 +7,8 @@ module.exports = (sequelize) => {
     "recipe",
     {
       id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        type: DataTypes.INTEGER,
+        // defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
         allowNull: false,
       },
@@ -19,7 +19,7 @@ module.exports = (sequelize) => {
       },
 
       summary: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
       },
 
@@ -28,11 +28,11 @@ module.exports = (sequelize) => {
       },
 
       steps: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
       },
 
       dishTypes: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
       },
 
       image: {
