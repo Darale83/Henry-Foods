@@ -14,8 +14,8 @@ const getApiInfo = async () => {
       image: e.image,
       summary: e.summary.replace(/(<([^>]+)>)/gi, ""),
       healthScore: e.healthScore,
-      // diets: e.diets,
-      dishTypes: e.dishTypes.join("").toString(),
+      diets: e.diets.join(", ").toString(),
+      dishTypes: e.dishTypes.join(", ").toString(),
       steps: e.analyzedInstructions[0]?.steps
         .map((e) => {
           return e.step;
@@ -45,13 +45,14 @@ const getDbInfo = async () => {
   });
 };
 
-const getAllRecipes = async () => {
-  const [apiRecipes2, dbRecipes2] = await Promise.all([
-    getApiInfo(),
-    getDbInfo(),
-  ]);
-  return [...apiRecipes2, ...dbRecipes2];
-};
+// const getAllRecipes = async () => {
+//   const dbRecipes2 = await Promise.all([
+//     // getApiInfo(),
+//     getDbInfo(),
+//   ]);
+//   console.log(dbRecipes2);
+//   return [...dbRecipes2];
+// };
 
 const createTypes = async () => {
   const apiInfo = await axios.get(
@@ -70,8 +71,9 @@ const createTypes = async () => {
 };
 
 module.exports = {
-  getAllRecipes,
+  // getAllRecipes,
   createTypes,
   getApiInfo,
+  getDbInfo,
   apiToDb,
 };

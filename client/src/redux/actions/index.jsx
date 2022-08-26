@@ -16,20 +16,19 @@ export const getAllRecipes = () => {
     return await axios
       .get(`http://localhost:3001/recipes`)
       .then((response) => {
-        if (response.data.name === "Error") {
-          console.log(response);
-          // return alert(response.data.name);
-        } else {
-          window.localStorage.setItem(
-            "allRecipes",
-            JSON.stringify(response.data)
-          );
+        // if (response.data.name === "Error") {
+        //   console.log(response);
+        //   return alert(response.data.name);
+        // } else {
+        //   window.localStorage.setItem(
+        //     "allRecipes",
+        //     JSON.stringify(response.data)
+        //   );
         dispatch({
           type: GET_ALL_RECIPES,
           payload: response.data,
         });
-      }
-    })
+      })
       .catch((error) => {
         console.log(error);
       });
@@ -41,16 +40,15 @@ export const getAllTypes = () => {
     return await axios
       .get(`http://localhost:3001/types`)
       .then((response) => {
-        if (response.data.name === "Error") {
-          console.log(response);
-          // return alert(response.data.name);
-        } else {
-          window.localStorage.setItem("types", JSON.stringify(response.data));
-          dispatch({
-            type: GET_ALL_TYPES,
-            payload: response.data,
-          });
-        }
+        // if (response.data.name === "Error") {
+        //   console.log(response);
+        //    return alert(response.data.name);
+        // } else {
+        //   window.localStorage.setItem("types", JSON.stringify(response.data));
+        dispatch({
+          type: GET_ALL_TYPES,
+          payload: response.data,
+        });
       })
       .catch((error) => {
         console.log(error);

@@ -13,9 +13,9 @@ import {
 } from "../actions/index";
 
 const initialState = {
-  allRecipes: JSON.parse(window.localStorage.getItem("allRecipes")) || [],
-  allRecipesCopy: JSON.parse(window.localStorage.getItem("allRecipes")) || [],
-  types: JSON.parse(window.localStorage.getItem("types")) || [],
+  allRecipes: [],
+  allRecipesCopy: [],
+  types: [],
   details: {},
 };
 

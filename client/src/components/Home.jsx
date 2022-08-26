@@ -20,7 +20,9 @@ import NoFood from "./NoFood";
 
 const Home = () => {
   const allRecipes = useSelector((state) => state.allRecipes);
+  console.log(allRecipes);
   const types = useSelector((state) => state.types);
+  console.log(types);
   const [order, setOrder] = useState("");
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,6 +34,7 @@ const Home = () => {
   const currentRecipes = !allRecipes.length
     ? []
     : allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
+  console.log(currentRecipes[0]);
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -84,7 +87,6 @@ const Home = () => {
     dispatch(getAllRecipes());
   };
 
-  
   return (
     <div className={styles.homeContainer}>
       <div>
@@ -93,7 +95,6 @@ const Home = () => {
       <div className={styles.home}>
         <aside className={styles.aside}>
           <div className={styles.sidePanel}>
-          
             <div className={styles.searchPos}>
               <SearchBar setCurrentPage={setCurrentPage} />
             </div>
@@ -159,7 +160,7 @@ const Home = () => {
                       image={e.image}
                       healthScore={e.healthScore}
                       dishTypes={e.dishTypes}
-                      diets={e.types ? e.types?.map((e) => e.name) : e.diets}
+                      diets={e.diets}
                     />
                   );
                 })}

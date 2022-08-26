@@ -27,6 +27,10 @@ module.exports = (sequelize) => {
         type: DataTypes.INTEGER,
       },
 
+      diets: {
+        type: DataTypes.STRING,
+      },
+
       steps: {
         type: DataTypes.TEXT,
       },

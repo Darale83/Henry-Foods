@@ -18,7 +18,7 @@ export default function RecipeDetails(props) {
 
   return (
     <div className={styles.box}>
-      {recipe.length === 0 ? (
+      {recipe?.length === 0 ? (
         <div className={styles.detailsLoader}>
           <Loader />
         </div>
@@ -42,15 +42,13 @@ export default function RecipeDetails(props) {
               </p>
               <p>
                 <strong>Dish Types: </strong>
-                {id.length > 6
-                  ? recipe.dishTypes
-                  : recipe.dishTypes?.join(", ")}
+                {id.length > 6 ? recipe.dishTypes : recipe.dishTypes}
               </p>
               <p>
                 <strong>Diets: </strong>
                 {id.length > 6
                   ? recipe.types?.map((e) => e.name).join(", ")
-                  : recipe.diets?.join(", ")}
+                  : recipe.diets}
               </p>
               <p>
                 <strong>Description: </strong>

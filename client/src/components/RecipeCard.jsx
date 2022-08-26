@@ -24,12 +24,10 @@ export default function RecipeCard({
           <div className="inner">
             <img src={image} alt="Not found" />
             <div className="stats">
-              <h2>{title}</h2>
+              <h3>{title}</h3>
               <h4>Health Score: {healthScore}</h4>
-              <h4>
-                Dish Types: {id.length > 6 ? dishTypes : dishTypes.join(", ")}
-              </h4>
-              <h4>Diets: {diets.join(", ")}</h4>
+              <h4>Dish Types: {id?.length ? dishTypes : dishTypes}</h4>
+              <h4>Diets: {diets}</h4>
             </div>
           </div>
         </div>

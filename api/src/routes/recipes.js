@@ -1,13 +1,13 @@
 const { Router } = require("express");
 //const { DataTypes } = require("sequelize/types");
 const { Recipe, Type } = require("../db");
-const { getAllRecipes } = require("../utils/functions");
+const { getAllRecipes, getDbInfo } = require("../utils/functions");
 const router = Router();
 
 router.get("/", async (req, res, next) => {
   try {
     const { name } = req.query;
-    const allRecipes = await getAllRecipes();
+    const allRecipes = await getDbInfo();
     if (name) {
       let recipes = allRecipes.filter((e) =>
         e.title.toLowerCase().includes(name.toString().toLowerCase())
@@ -26,7 +26,7 @@ router.get("/", async (req, res, next) => {
 router.get("/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
-    const allRecipes = await getAllRecipes();
+    const allRecipes = await getDbInfo();
     if (id) {
       let recipe = allRecipes.filter((e) => e.id == id);
       recipe
